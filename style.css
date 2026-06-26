@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Card */
+.card {
+    position: relative;
+    z-index: 10;
+    width: 650px;
+    padding: 40px;
+    text-align: center;
+
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, .4);
+}
+
+/* Heading */
+.card h1 {
+    color: white;
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.card h1 span {
+    color: #ff85dd;
+}
+
+/* Line */
+.line {
+    width: 120px;
+    height: 2px;
+    background: #ff85dd;
+    margin: 25px auto;
+}
+
+/* Image */
+.image {
+    width: 230px;
+    height: 230px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #d66cff;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text */
+.card p {
+    color: white;
+    font-size: 22px;
+    margin: 35px;
+}
+
+/* Button */
+button {
+    padding: 18px 45px;
+    border: none;
+    border-radius: 50px;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+
+    background: linear-gradient(to right, #ff5db1, #7f7dff);
+    transition: 0.4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(255, 0, 170, 0.5);
+}
+
+/* Footer (IMPORTANT) */
+.footer {
+
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 700px;
+
+    padding: 15px;
+    text-align: center;
+
+    color: white;
+    font-size: 18px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    z-index: 1000;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+
+    .card {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .card h1 {
+        font-size: 38px;
+    }
+
+    .image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+
+    .footer {
+        width: 90%;
+        font-size: 14px;
+    }
+}
